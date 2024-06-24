@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./Header.css";
 
 const Header = () => {
@@ -10,4 +10,8 @@ const Header = () => {
   );
 };
 
-export default Header;
+// 최적화
+// const memoizedHeader = memo(Header);
+// export default memoizedHeader;
+
+export default memo(Header);
